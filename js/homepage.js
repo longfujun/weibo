@@ -36,17 +36,17 @@ function myCb(json) {//接收处理数据
     }
 }
 // 头部js结束
-var aside = document.querySelector('.l-aside');
-window.onscroll=function(){
-    var sTop=document.documentElement.scrollTop||document.body.scrollTop;
-    if(sTop>68){
-        aside.style.position="fixed";
-        aside.style.top=48+'px';
-    }
-    else{
-        aside.style.position="static";
-    }
-}
+// var aside = document.querySelector('.l-aside');
+// window.onscroll=function(){
+//     var sTop=document.documentElement.scrollTop||document.body.scrollTop;
+//     if(sTop>68){
+//         aside.style.position="fixed";
+//         aside.style.top=48+'px';
+//     }
+//     else{
+//         aside.style.position="static";
+//     }
+// }
 //导航栏选择效果
 $('.nav li a').click(function () {
     $(this).addClass('current').parent().siblings().children().removeClass('current');
@@ -70,7 +70,8 @@ var mySwiper = new Swiper ('.swiper-container', {
         },
     })
 
-    //右下侧回到顶部按钮事件
+    //右下侧回到顶部按钮事件和侧边栏滚动固定事件
+var aside = document.querySelector('.l-aside');
 var onUp = document.querySelector('.onUp');
 var lHeader = document.querySelector('.l-header');
 window.onscroll=function(){
@@ -82,5 +83,12 @@ window.onscroll=function(){
     else{
         onUp.style.display='none';
         lHeader.style.boxShadow='0px 0px 0px 0px #fff';
+    };
+    if(sTop>20){
+        aside.style.position="fixed";
+        aside.style.top=48+'px';
+    }
+    else{
+        aside.style.position="static";
     }
 }
