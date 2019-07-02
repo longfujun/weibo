@@ -132,12 +132,12 @@
 }
 .main-right{
     margin-left:  260px;
-    width: 100%;
+    width: 1066px;
 
     /* flex: 1; */
 }
 .main-right .nav{
-    width: 1066px;
+    width: 100%;
     position: relative;
     
     height: 358px;
@@ -203,8 +203,10 @@
 }
 .tv{
     /* margin:0 0 24px; */
-    margin: 24px -4px 48px 0;
-    width: 1066px;
+    margin: 24px -4px 24px 0;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
 }
 .tv .top{
     overflow: hidden;
@@ -221,11 +223,50 @@
     line-height: 20px;
     font-size: 12px;
 }
-.tv ul{
+.main-right ul{
     margin: 24px 0 0;
 }
-.tv ul li{
+.main-right ul li{
+    width: 210px;
     float: left;
     margin: 0 3px 24px 0;
     cursor: pointer;
+}
+.main-right h4{
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 0 4px;
+}
+.main-right h4:hover{
+    color: #FF8200;
+}
+.main-right p{
+    font-size: 12px;
+}
+.eat{
+    width:100%;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.eat .top{
+    margin-bottom: 8px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.eat .top img{
+    float: left;
+    margin-right: 10px;
+}
+.eat .top .txt{
+    float: left;
+}
+.eat .top .txt h5{
+    line-height: 23px;
+    font-size: 14px;
+}
+.eat .top .txt p{
+    font-size: 12px;
+    line-height: 18px;
 }
